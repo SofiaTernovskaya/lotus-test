@@ -1,0 +1,575 @@
+@import 'vars.css';
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Light-subset.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Light.subset.otf')
+      format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/Biotif-LightItalic.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/Biotif-LightItalic.otf')
+      format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Book-subset.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Book.subset.otf')
+      format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-BookItalic.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-BookItalic.otf')
+      format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Regular-subset.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Regular.subset.otf')
+      format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-RegularItalic.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-RegularItalic.otf')
+      format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-SemiBold-subset.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-SemiBold.subset.otf')
+      format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-SemiBoldItalic.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-SemiBoldItalic.otf')
+      format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Bold-subset.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-Bold.subset.otf')
+      format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: local('MS_Biotif'), local('Biotif'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-BoldItalic.woff2')
+      format('woff2'),
+    url('https://cdn.makespace.com/s/fonts/MS_Biotif-BoldItalic.otf')
+      format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+}
+
+.custom-theme {
+  font-family: 'Biotif', Arial, Helvetica, sans-serif;
+  color: var(--dark-color);
+
+  .topbar {
+    background-color: var(--dark-color);
+  }
+
+  .btn--topbar,
+  .login {
+    height: 60px;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    border: solid 1px var(--button-color);
+    text-transform: uppercase;
+    vertical-align: top;
+    background-color: transparent;
+    border-radius: 0;
+
+    @media (--sm) {
+      margin-bottom: 0;
+      border: none;
+      height: auto;
+      width: auto;
+      color: var(--text-light);
+      background-color: transparent;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  .login {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+
+    @media (--sm) {
+      background-color: transparent;
+    }
+  }
+
+  .topbar__controls {
+    display: flex;
+    flex-direction: column;
+
+    @media (--sm) {
+      flex-direction: row;
+    }
+  }
+
+  .burger-button {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    background: url(https://cdn.makespace.com/s/img/ws/burger.svg) 50% 50%
+      no-repeat;
+    background-size: contain;
+    border: none;
+    outline: none;
+
+    @media (--sm) {
+      display: none;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .search {
+    height: 50px;
+
+    @media (--md) {
+      height: 60px;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  #query {
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 200;
+    background-color: var(--light-color);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .search-box--hero-unit input[type='submit'] {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-color);
+    text-transform: capitalize;
+
+    @media (--sm) {
+      width: 120px;
+    }
+  }
+
+  .custom-block {
+    &__link {
+      display: flex;
+      align-items: center;
+
+      @media (--xs) {
+        flex-direction: column;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      transition: background-color 0.2s;
+
+      @media (--xs) {
+        width: 70px;
+        min-width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__link:hover .custom-block__icon {
+      background-color: var(--hover-color);
+    }
+
+    &__svg {
+      width: 20px;
+      height: 20px;
+      color: var(--light-color);
+
+      @media (--xs) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0;
+      font-weight: 400;
+      color: var(--dark-color);
+    }
+  }
+
+  .category-list-item {
+    &__link {
+      background-color: var(--button-color);
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .promoted-articles-item {
+    &__title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark-color);
+
+      & + .meta {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__text,
+    &__title {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-transform: capitalize;
+    }
+  }
+  .btn--default,
+  .btn--primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    padding: 3px 20px 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  }
+
+  .btn--default {
+    width: 100%;
+
+    @media (--sm) {
+      width: initial;
+    }
+  }
+
+  .category-tree-item__title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -15px;
+      height: 1px;
+      background-color: var(--border-color);
+
+      @media (--xs) {
+        bottom: 50%;
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: inline-block;
+      font-size: 30px;
+      padding: 0 20px;
+      background-color: var(--light-color);
+    }
+  }
+
+  .section__title {
+    text-align: center;
+
+    @media (--sm) {
+      text-align: left;
+    }
+
+    &-link {
+      color: var(--primary-color);
+    }
+  }
+
+  .article-list-item {
+    text-align: center;
+
+    @media (--sm) {
+      text-align: left;
+    }
+
+    &__link {
+      font-weight: 200;
+      color: var(--dark-color);
+    }
+  }
+
+  .star-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .intro-title {
+    font-size: 38px;
+
+    @media (--xs) {
+      font-size: 56px;
+    }
+  }
+
+  .community-recent-activity {
+    position: relative;
+    border: none;
+    text-align: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      top: 0;
+      transform: translate(-50%);
+      display: block;
+      min-width: 100vw;
+      background-color: var(--light-bg);
+      z-index: -1;
+    }
+
+    &--highlight {
+      color: var(--primary-color);
+    }
+  }
+
+  .footer-social-link {
+    color: var(--primary-color);
+  }
+
+  .footer-submit-ticket {
+    background-color: transparent;
+  }
+
+  .scroll-to-top {
+    border: none;
+    box-shadow: 0 0 4px 2px var(--border-color);
+    background-color: var(--light-color);
+    color: var(--light-color);
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      font-size: 24px;
+      z-index: 2;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      z-index: 1;
+    }
+  }
+
+  .ws-footer__link {
+    color: var(--light-color);
+  }
+}
+
+.loader {
+  position: relative;
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: var(--primary-color);
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 10%,
+    var(--light-color) 42%
+  );
+  animation: animation-loader 1.4s infinite linear;
+  transform: translateZ(0);
+}
+
+.loader:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: var(--light-color);
+  border-radius: 100% 0 0 0;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+  height: 75%;
+  margin: auto;
+  background-color: var(--light-color);
+  border-radius: 50%;
+}
+
+@-webkit-keyframes animation-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

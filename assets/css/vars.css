@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #3eae5f;
+  --light-color: #fff;
+  --dark-color: #0f3916;
+  --hover-color: #2c7738;
+  --light-bg: #f4f4f4;
+  --button-color: #1b532d;
+  --border-color: #d8d9db;
+}
+
+/*--------media queries-------- */
+@custom-media --xs (min-width: 480px);
+@custom-media --sm (min-width: 768px);
+@custom-media --md (min-width: 992px);
+@custom-media --lg (min-width: 1200px);
